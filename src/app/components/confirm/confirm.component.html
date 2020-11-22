@@ -1,0 +1,14 @@
+<content class="confirm">
+  <h1 mat-dialog-title>{{ title }}</h1>
+  <div mat-dialog-content>
+    {{ message }}
+  </div>
+  <div mat-dialog-actions class="button-group">
+    <button mat-raised-button (click)="choice(true)" class="accept">
+      {{ accept }}
+    </button>
+    <button mat-raised-button (click)="choice(false)" class="cancel">
+      {{ cancel }}
+    </button>
+  </div>
+</content>

@@ -1,0 +1,28 @@
+<content class="list section list-items">
+  <perfect-scrollbar (psYReachEnd)="getMore($event)">
+    <mat-list #tasks>
+      <mat-list-item *ngFor="let user of users; let i = index" class="not-margin not-padding">
+        <button mat-button (click)="edit($event, user.id)">
+          <div class="row">
+            <div class="col-9">
+              <h3>{{user.first_name}} {{user.last_name}}</h3>
+              <h4>{{ user.user }}</h4>
+              <h4>{{ user.email }}</h4>
+            </div>
+            <div class="col-3 options">
+              <button mat-fab (click)="delete($event, i, user.id)">
+                <mat-icon aria-hidden="false">{{deleteIcon}}</mat-icon>
+              </button>
+            </div>
+          </div>
+         
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </perfect-scrollbar>
+
+  <button mat-fab (click)="new()" class="bottom right">
+    <mat-icon aria-hidden="false">{{newIcon}}</mat-icon>
+  </button>
+
+</content>

@@ -1,0 +1,85 @@
+<content class="form">
+  <form [formGroup]="updateForm">
+    <div class="row content">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <mat-form-field>
+              <input type="text" matInput formControlName="user" placeholder="{{'FORM.USER' | translate}}">
+              <mat-error
+                *ngIf="updateForm.controls.user.invalid && (updateForm.controls.user.dirty || updateForm.controls.user.touched)">
+                <span
+                  *ngIf="updateForm.controls.user.errors.required">{{'FORM.MESSAGES.ERRORS.USER_REQUIRED' | translate }}</span>
+                <span
+                  *ngIf="updateForm.controls.user.errors.minlength">{{'FORM.MESSAGES.ERRORS.USER_MINLENGTH' | translate:{longitude:validate.USER.MIN} }}</span>
+                <span
+                  *ngIf="updateForm.controls.user.errors.maxlength">{{'FORM.MESSAGES.ERRORS.USER_MAXLENGTH' | translate:{longitude:validate.USER.MAX} }}</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <mat-form-field>
+              <input type="text" matInput formControlName="email" placeholder="{{'FORM.EMAIL' | translate}}">
+              <mat-error
+                *ngIf="updateForm.controls.email.invalid && (updateForm.controls.email.dirty || updateForm.controls.email.touched)">
+                <span
+                  *ngIf="updateForm.controls.email.errors.required">{{'FORM.MESSAGES.ERRORS.EMAIL_REQUIRED' | translate }}</span>
+                <span
+                  *ngIf="updateForm.controls.email.errors.pattern">{{'FORM.MESSAGES.ERRORS.EMAIL_PATTERN' | translate }}</span>
+                <span
+                  *ngIf="updateForm.controls.email.errors.minlength">{{'FORM.MESSAGES.ERRORS.EMAIL_MINLENGTH' | translate:{longitude:validate.EMAIL.MIN} }}</span>
+                <span
+                  *ngIf="updateForm.controls.email.errors.maxlength">{{'FORM.MESSAGES.ERRORS.EMAIL_MAXLENGTH' | translate:{longitude:validate.EMAIL.MAX} }}</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <mat-form-field>
+              <input type="text" matInput formControlName="first_name" placeholder="{{'FORM.FIRST_NAME' | translate}}">
+              <mat-error
+                *ngIf="updateForm.controls.first_name.invalid && (updateForm.controls.first_name.dirty || updateForm.controls.first_name.touched)">
+                <span
+                  *ngIf="updateForm.controls.first_name.errors.required">{{'FORM.MESSAGES.ERRORS.FIRST_NAME_REQUIRED' | translate }}</span>
+                <span
+                  *ngIf="updateForm.controls.first_name.errors.minlength">{{'FORM.MESSAGES.ERRORS.FIRST_NAME_MINLENGTH' | translate:{longitude:validate.FIRST_NAME.MIN} }}</span>
+                <span
+                  *ngIf="updateForm.controls.first_name.errors.maxlength">{{'FORM.MESSAGES.ERRORS.FIRST_NAME_MAXLENGTH' | translate:{longitude:validate.FIRST_NAME.MAX} }}</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <mat-form-field>
+              <input type="text" matInput formControlName="last_name" placeholder="{{'FORM.LAST_NAME' | translate}}">
+              <mat-error
+                *ngIf="updateForm.controls.last_name.invalid && (updateForm.controls.last_name.dirty || updateForm.controls.last_name.touched)">
+                <span
+                  *ngIf="updateForm.controls.last_name.errors.required">{{'FORM.MESSAGES.ERRORS.LAST_NAME_REQUIRED' | translate }}</span>
+                <span
+                  *ngIf="updateForm.controls.last_name.errors.minlength">{{'FORM.MESSAGES.ERRORS.LAST_NAME_MINLENGTH' | translate:{longitude:validate.LAST_NAME.MIN} }}</span>
+                <span
+                  *ngIf="updateForm.controls.last_name.errors.maxlength">{{'FORM.MESSAGES.ERRORS.LAST_NAME_MAXLENGTH' | translate:{longitude:validate.LAST_NAME.MAX} }}</span>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="submit">
+        <button mat-raised-button type="button" (click)="update()"
+          [disabled]="updateForm.invalid || loading">{{'UPDATE' | translate}}</button>
+        <button mat-raised-button type="button" class="cancel" (click)="back()"
+          [disabled]="loading">{{'CANCEL' | translate}}</button>
+      </div>
+    </div>
+  </form>
+</content>

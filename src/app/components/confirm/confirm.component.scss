@@ -1,0 +1,28 @@
+.confirm{
+  border-radius: 20px !important;
+  text-align: center;
+  padding: 15px 15px 25px;
+  max-width: 550px;
+
+  h1{
+    padding: 24px 24px 10px 24px !important;
+  }
+
+  .button-group{
+    display: inline-flex;
+    position: relative;
+    padding: 0 !important;
+    button {
+      position: relative;
+      top: unset !important;
+      right: unset !important;
+      font-weight: normal !important;
+      font-size: 18px !important;
+      min-width: 120px !important;
+      margin: 30px 4px auto 4px;
+      padding: 15px 20px !important;
+      height: auto !important;
+      border-radius: 0 !important;
+    }
+  }
+}

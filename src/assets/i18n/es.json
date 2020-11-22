@@ -1,0 +1,55 @@
+{
+  "FORM": {
+    "USER": "Usuario",
+    "NAME": "Nombre",
+    "FIRST_NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "EMAIL": "Correo electrónico",
+    "MESSAGES": {
+      "ERRORS": {
+        "USER_REQUIRED": "El usuario es requerido",
+        "EMAIL_REQUIRED": "El correo es requerido",
+        "FIRST_NAME_REQUIRED": "El nombre es requerido",
+        "LAST_NAME_REQUIRED": "El apellido es requerido",
+        "USER_MINLENGTH": "El usuario debe tener al menos {{longitude}} caracter(es)",
+        "USER_MAXLENGTH": "El usuario debe tener como máximo {{longitude}} caracter(es)",
+        "EMAIL_MINLENGTH": "El correo eletrónico debe tener al menos {{longitude}} caracter(es)",
+        "EMAIL_MAXLENGTH": "El correo eletrónico debe tener como máximo {{longitude}} caracter(es)",
+        "EMAIL_PATTERN": "El correo eletrónico tiene formato inválido",
+        "FIRST_NAME_MINLENGTH": "El nombre debe tener al menos {{longitude}} caracter(es)",
+        "FIRST_NAME_MAXLENGTH": "El nombre debe tener como máximo {{longitude}} caracter(es)",
+        "LAST_NAME_MINLENGTH": "El apellido debe tener al menos {{longitude}} caracter(es)",
+        "LAST_NAME_MAXLENGTH": "El apellido debe tener como máximo {{longitude}} caracter(es)"
+      }
+    },
+    "LOGIN": {
+      "LIMIT": "Máximo {{longitude}} caracter(es)"
+    },
+    "INCIDENCE": "Incidencia"
+  },
+  "HOME": "Inicio",
+  "USERS": "Usuarios",
+  "USER": "Usuario",
+  "BACK": "Atrás",
+  "LOADING": "Espere un momento...",
+  "NOT_FOUND": "No hay datos disponibles",
+  "MENU": "Menú",
+  "SEND": "Enviar",
+  "UPDATE": "Editar",
+  "DONE": "Hecho",
+  "CLOSE": "Cerrar",
+  "CANCEL": "Cancelar",
+  "ACCEPT": "Aceptar",
+  "CONFIRM": "Confirmar acción",
+  "DELETE": "Borrar",
+  "DELETE_USER": "¿Esta seguro que desea borrar este usuario?",
+  "DELETE_USER_SUCCESS": "El usuario ha sido borrado",
+  "DELETE_USER_FAILED": "El usuario no pudo ser borrado",
+  "NEW": "Insertar usuarios",
+  "REGISTER_SUCCESS": "El usuario fue registrado",
+  "REGISTER_FAILED": "El usuario no pudo ser registrado",
+  "SECTIONS":{
+    "NEW": "Registrar usuario",
+    "UPDATE": "Actualizar Usuario"
+  }
+}

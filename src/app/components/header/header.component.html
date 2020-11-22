@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h2>
+      <mat-icon *ngIf="sections[header.getRawTitle()] != undefined">{{sections[header.getRawTitle()]}}</mat-icon> {{header.getTitle() | translate}}
+    </h2>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="bar-buttons" right >
+  <button mat-icon-button (click)="onToggleSidenav()">
+    <mat-icon class="notification">
+      {{sections['MENU']}}
+    </mat-icon>
+  </button>
+</div>
+<div class="progress-bar-container">
+  <mat-progress-bar *ngIf="!header.getDisableProgress()"
+    class="header.getClassProgress()"
+    [color]="header.getColorProgress()"
+    [mode]="header.getModeProgress()"
+    [value]="header.geValueProgress()"
+    [bufferValue]="header.geBufferValueProgress()" #progressBar>
+  </mat-progress-bar>
+</div>

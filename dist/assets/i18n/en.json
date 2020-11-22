@@ -1,0 +1,55 @@
+{
+  "FORM": {
+    "USER": "User",
+    "NAME": "Name",
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "EMAIL": "Email",
+    "MESSAGES": {
+      "ERRORS": {
+        "USER_REQUIRED": "User is required",
+        "EMAIL_REQUIRED": "Email is required",
+        "FIRST_NAME_REQUIRED": "The first name is required",
+        "LAST_NAME_REQUIRED": "The last name is required",
+        "USER_MINLENGTH": "The user must be al least {{longitude}} characters",
+        "USER_MAXLENGTH": "User must have a maximum of {{longitude}} characters",
+        "EMAIL_MINLENGTH": "Email must be al least {{longitude}} characters",
+        "EMAIL_MAXLENGTH": "Email must have a maximum of {{longitude}} characters",
+        "EMAIL_PATTERN": "Email has an invalid format",
+        "FIRST_NAME_MINLENGTH": "First name must be al least {{longitude}} characters",
+        "FIRST_NAME_MAXLENGTH": "First name must have a maximum of {{longitude}} characters",
+        "LAST_NAME_MINLENGTH": "Last name must be al least {{longitude}} characters",
+        "LAST_NAME_MAXLENGTH": "Last name must have a maximum of {{longitude}} characters"
+      }
+    },
+    "LOGIN": {
+      "LIMIT": "Max {{longitude}} characters"
+    },
+    "INCIDENCE": "Incidence"
+  },
+  "HOME": "Home",
+  "USERS": "Users",
+  "USER": "User",
+  "BACK": "Back",
+  "LOADING": "Wait a moment...",
+  "NOT_FOUND": "The data has not been found",
+  "MENU": "Menu",
+  "SEND": "Send",
+  "DONE": "Done",
+  "UPDATE": "Update",
+  "CLOSE": "Close",
+  "CANCEL": "Cancel",
+  "ACCEPT": "Accept",
+  "CONFIRM": "Confirm action",
+  "DELETE": "Delete",
+  "DELETE_USER": "Are your sure do you want to delete this user?",
+  "DELETE_USER_SUCCESS": "The user has been deleted succesfully",
+  "DELETE_USER_FAILED": "The user has not been deleted",
+  "NEW": "New user",
+  "REGISTER_SUCCESS": "The user has been registered",
+  "REGISTER_FAILED": "The user has not been registered",
+  "SECTIONS":{
+    "NEW": "New users",
+    "UPDATE": "Update User"
+  }
+}

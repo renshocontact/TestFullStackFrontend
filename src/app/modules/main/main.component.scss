@@ -1,0 +1,68 @@
+@import "../../../assets/styles/colors.scss";
+
+.list {
+    width: 100%;
+    padding: 0px;
+    height: 100%;
+    display: contents;
+    margin: 0px;
+
+    perfect-scrollbar {
+        display: flex;
+    }
+
+    .mat-list-item {
+        padding: 0px;
+        height: unset !important;
+
+        button {
+            padding: 8px;
+            width: 100%;
+            background-color: initial !important;
+
+            h3,
+            h4 {
+                margin-top: 0px !important;
+                margin-bottom: 0px !important;
+                text-align: left;
+            }
+
+            h4 {
+                font-size: 12px;
+                color: map-get($colors, gray);
+            }
+
+            h3 {
+                font-size: 25px;
+                color: initial !important;
+            }
+
+            .options {
+                text-align:right;
+                button {
+                    position: relative;
+                    width: 50px !important;
+                    height: 50px !important;
+                    padding: 0px !important;
+                    background-color: unset !important;
+                    box-shadow: unset;
+
+                    .mat-icon {
+                        color: map-get($colors, red);
+                        width: 40px !important;
+                        height: 40px !important;
+                        font-size: 40px;
+                        margin: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    /* angular no me deja modificar mat-list-item-content al renderizarlo en tiempo real y no ser parte d ela estructura, ademas le define un estilo no mutable, por ello uso deep*/
+    /deep/ .mat-list-base .mat-list-item .mat-list-item-content,
+    .mat-list-base .mat-list-option .mat-list-item-content {
+        padding: 0px !important;
+    }
+
+}

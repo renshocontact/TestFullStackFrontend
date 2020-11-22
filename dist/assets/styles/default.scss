@@ -1,0 +1,418 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors.scss";
+@import "fonts.scss";
+
+html {
+    height: 100%;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+mat-tooltip-component {
+    .mat-tooltip {
+        white-space: pre-line;
+    }
+}
+
+body {
+    margin: 0;
+    background-color: map-get($colors, content_background) !important;
+    height: 100%;
+}
+
+.mat-drawer-container {
+    background-color: unset !important;
+}
+
+.cdk-overlay-connected-position-bounding-box {
+    z-index: 1001 !important;
+}
+
+.mat-snack-bar-container {
+    transition: none !important;
+    padding: 12px;
+    margin: 0 !important;
+    color: map-get($colors, white) !important;
+    width: 100% !important;
+    max-width: unset !important;
+    text-align: center !important;
+    font-family: "Champagne & Limousines" !important;
+    font-size: 18px;
+    width: 100%;
+    position: absolute;
+    z-index: 10510 !important;
+    bottom: 0;
+}
+
+.mat-snack-bar-container.hide {
+    display: none;
+}
+
+.mat-snack-bar-container.show {
+    display: block;
+}
+
+.mat-snack-bar-container.default-message {
+    background-color: map-get($colors, blue_buttons_dark) !important;
+}
+
+.mat-snack-bar-container.error {
+    background-color: map-get($colors, red) !important;
+}
+
+.progress-bar-container {
+    height: 3px;
+    background-color: unset;
+
+    .mat-progress-bar {
+        height: 3px;
+
+        .mat-progress-bar-buffer {
+            background-color: map-get($colors, blue_button_map);
+        }
+
+        .mat-progress-bar-fill:after {
+            background-color: map-get($colors, blue_button_map_dark);
+        }
+    }
+}
+
+content {
+    height: calc(100% - 64px);
+    display: block;
+
+    mat-form-field {
+        width: 100%;
+    }
+
+    .loading-scrollbar {
+        text-align: center;
+        width: 100%;
+        margin: 8px 0 8px 0 !important;
+        height: 25px;
+    }
+
+    button {
+        margin: auto auto !important;
+        display: flex !important;
+        min-width:40% !important;
+        text-align: center;
+        background-color: map-get($colors, blue_buttons) !important;
+        .mat-button-wrapper{
+            width: 100%;
+            text-align:center;
+            color: map-get($colors, light) !important;
+        }
+    }
+
+    button[disabled] {
+        background-color: map-get($colors, button_disabled) !important;
+        -webkit-box-shadow: 1px 1px 2px map-get($colors, form) !important;
+        box-shadow: 1px 1px 2px map-get($colors, form) !important;
+        .mat-button-wrapper{
+            color: map-get($colors, button_disabled_text) !important;
+        }
+    }
+
+    button.cancel {
+        font-weight: normal;
+        height: auto !important;
+        background-color: map-get($colors, red) !important;
+        color: map-get($colors, light) !important;
+        text-transform: initial;
+    }
+
+    button.mat-fab {
+        background-color: map-get($colors, blue_buttons) !important;
+        color: map-get($colors, white) !important;
+        min-width: unset !important;
+        display: inline !important;
+        position: fixed;
+        z-index: 1050;
+
+        .mat-button-wrapper {
+            padding: 0 !important;
+        }
+
+        &.top {
+            top: 75px;
+        }
+
+        &.right {
+            right: 16px;
+        }
+
+        &.second-right {
+            right: 75px;
+        }
+
+        &.bottom {
+            bottom: 12px;
+        }
+
+        &.left {
+            left: 12px;
+        }
+
+        &.second-left {
+            left: 75px;
+        }
+
+        &.fixed {
+            position: fixed;
+        }
+
+        &.relative {
+            position: relative !important;
+        }
+
+        &.absolute {
+            position: absolute !important;
+        }
+
+        &.fixed.right {
+            right: 15px;
+        }
+
+        &.fixed.left {
+            left: 15px;
+        }
+
+        input[type=file] {
+            display: none;
+        }
+    }
+
+    mat-form-field.mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
+        background-color: map-get($colors, error) !important;
+    }
+
+    mat-form-field.mat-form-field.mat-focused .mat-form-field-ripple {
+        background-color: map-get($colors, blue_buttons);
+    }
+
+    mat-form-field.mat-form-field.mat-focused .mat-form-field-label {
+        color: map-get($colors, blue_buttons);
+    }
+}
+
+.cdk-overlay-container {
+    z-index: 1051;
+
+    .cdk-global-overlay-wrapper {
+        z-index: 1001;
+    }
+
+    .cdk-overlay-pane {
+        transition: none !important;
+        width: auto;
+    }
+}
+
+.cdk-overlay-pane.mat-datepicker-dialog {
+    width: initial;
+
+    .mat-datepicker-content {
+        margin: unset !important;
+        display: inline;
+
+        mat-calendar {
+            height: 550px;
+        }
+    }
+
+    .mat-calendar-body-selected {
+        background-color: map-get($colors, blue_buttons);
+    }
+}
+
+/*****  CABECERA ****/
+main-header {
+    width: 100%;
+    display: inline-flex;
+
+    .mat-toolbar {
+        width: 100% !important;
+        min-height: 64px;
+        background: unset !important;
+
+        mat-toolbar-row {
+            height: 64px;
+
+            mat-icon {
+                font-size: 35px !important;
+                max-width: 35px;
+                max-height: 35px;
+                margin: -4px 14px 0 0;
+            }
+
+            h2 {
+                font-family: "Champagne & Limousines" !important;
+                color: map-get($colors, main_color) !important;
+                font-weight: normal !important;
+                display: inline-flex;
+                font-size: 25px !important;
+            }
+        }
+    }
+
+    .bar-buttons {
+        width: 80px;
+        margin: auto 12px;
+        text-align: right;
+        color: map-get($colors, main_color) !important;
+        font-weight: normal !important;
+
+        button {
+            display: inline-block;
+            width: 40%;
+            padding: 0;
+            margin: 0;
+
+            .mat-button-focus-overlay {
+                background: unset;
+            }
+
+            ion-icon {
+                font-size: 18px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
+
+/*******MENU*******/
+mat-sidenav-container {
+    position: inherit !important;
+
+    &,
+    mat-sidenav,
+    mat-sidenav-content {
+        height: 100%;
+    }
+
+    mat-sidenav-content {
+        overflow-x: hidden !important;
+    }
+
+    mat-sidenav {
+        width: 350px;
+        z-index: 1053 !important;
+        margin: 0 0 0 0 !important;
+
+        background-color: map-get($colors, menu_dark) !important;
+
+        .menu {
+            padding-top: 0 !important;
+
+            a span,
+            h3 {
+                font-weight: lighter;
+                font-size: 16px;
+                color: map-get($colors, white);
+                margin-bottom: 0 !important;
+            }
+
+            h3 {
+                background-color: unset !important;
+                text-transform: initial;
+                height: 48px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 8px 0 0 16px;
+                position: relative;
+            }
+
+            span {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+            }
+
+            a {
+                padding:20px;
+
+                .mat-list-item-content {
+                    padding-right: 0 !important;
+
+                    span {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mat-icon {
+                color: map-get($colors, blue_buttons);
+                margin-right: 20px;
+            }
+
+            a:hover {
+                background-color: map-get($colors, menu_hover) !important;
+
+                .mat-icon,
+                span {
+                    color: map-get($colors, white) !important;
+                    border-bottom: unset !important;
+                    box-shadow: unset !important;
+                }
+            }
+
+            .current {
+                background-color: map-get($colors, menu) !important;
+
+                .mat-icon,
+                span {
+                    color: map-get($colors, gray_light) !important;
+                }
+
+                span {
+                    border-bottom: unset !important;
+                    box-shadow: unset !important;
+                }
+            }
+
+            .sub-menu {
+                padding-left: 35px !important;
+                border: 0;
+
+                .mat-icon {
+                    font-size: 25px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    .mat-drawer-backdrop {
+        z-index: 1052 !important;
+    }
+}
+
+/*******VENTANA DE CONFIRMACIÓN*******/
+.confirm {
+    background-color: map-get($colors, default_background_dark) !important;
+    font-family: "Champagne & Limousines" !important;
+    font-size: 22px;
+
+    h1 {
+        font-size: 35px;
+        color: map-get($colors, blue_button_map_dark) !important;
+    }
+
+    .button-group {
+        button {
+            color: map-get($colors, white) !important;
+            background-color: map-get($colors, blue_buttons) !important;
+            text-transform: initial !important;
+
+            &.cancel {
+                background-color: map-get($colors, red) !important;
+            }
+        }
+    }
+}

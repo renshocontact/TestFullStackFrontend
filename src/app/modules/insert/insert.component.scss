@@ -1,0 +1,15 @@
+.form{
+  height: 100%;
+  display: inline;
+  .content{
+    margin: 6% auto 0px auto;
+    width: 60% !important;
+    min-width: 360px;
+    .submit {
+      display: inline-flex;
+      width: 100%;
+      text-align: center;
+      margin: auto auto;
+    }
+  }
+}

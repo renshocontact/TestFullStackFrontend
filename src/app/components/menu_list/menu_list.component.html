@@ -1,0 +1,23 @@
+<mat-nav-list class="menu">
+  <!--div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-left: 30px;"-->
+  <ng-container *ngFor="let item of menu.getMenu(); let i = index">
+    <a mat-list-item *ngIf="item.click !==undefined && item.click !==null" [hidden]="item.level!='*'"
+      [ngClass]="item.class" (click)="selection(item, i)">
+      <mat-icon>{{item.icon}}</mat-icon> <span class="nav-caption">{{ item.label | translate}}</span>
+    </a>
+    <h3
+      *ngIf="item.content !==undefined && item.content !==null && item.content.length !==undefined && item.content.length !==null && item.content.length > 0"
+      matLine>
+      <mat-icon>{{item.icon}}</mat-icon> <span class="nav-caption">{{ item.label | translate}}</span>
+    </h3>
+    <ng-container
+      *ngIf="item.content !==undefined && item.content !==null && item.content.length !==undefined && item.content.length !==null && item.content.length > 0">
+      <ng-container *ngFor="let subItem of item.content; let i2 = index">
+        <a matLine mat-list-item [hidden]="subItem.level!='*'" class="sub-menu" [ngClass]="subItem.class"
+          (click)="subSelection(subItem,i,i2)">
+          <mat-icon>{{subItem.icon}}</mat-icon> <span class="nav-caption">{{ subItem.label | translate}}</span>
+        </a>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</mat-nav-list>
