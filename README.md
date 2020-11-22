@@ -11,7 +11,7 @@ IMPORTANTE
 
 PRUEBA USANDO COMANDOS DE DESARROLLO HABITUALES
 
-- Comnandos para probar en navegador
+- Comandos para probar en navegador
     npm install --save 
     npm rebuild node-sass
     ng serve
